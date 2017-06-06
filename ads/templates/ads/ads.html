@@ -1,0 +1,10 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+    {% for item in page.gallery_images.all %}
+        <div style="width: 100%; height: auto">
+            {% image item.image fill-640x480 %}
+            <p>{{ item.caption }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

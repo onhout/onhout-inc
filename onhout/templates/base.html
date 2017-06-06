@@ -1,0 +1,57 @@
+{% load static wagtailuserbar %}
+{% load static %}
+{% load render_bundle from webpack_loader %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    {% render_bundle 'vendor' %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600'
+          rel='stylesheet' type='text/css'>
+    <title>
+        {% block title %}
+            {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+            {% with self.get_site.site_name as site_name %}
+                {% if site_name %}- {{ site_name }}{% endif %}
+            {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+    <div class="container">
+        <ul class="main-nav">
+            <li><a href="/#header">Home</a></li>
+            <li><a href="/#service">Services</a></li>
+            <li><a href="/#Portfolio">Portfolio</a></li>
+            <li class="small-logo"><a href="/#header"><img src="img/small-logo.png" alt=""></a></li>
+            <li><a href="/#blog">Blog</a></li>
+            <li><a href="/#team">Team</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+{% wagtailuserbar %}
+
+{% block content %}{% endblock %}
+
+{% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+{% endblock %}
+{% render_bundle 'main' %}
+</body>
+</html>
