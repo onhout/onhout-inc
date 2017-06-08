@@ -8,17 +8,17 @@
 
 
 
-    <section class="main-section" id="service"><!--main-section-start-->
+    <section class="main-section section-odd" id="service"><!--main-section-start-->
         {% include 'home/parts/services.html' %}
     </section><!--main-section-end-->
 
 
-    <section class="main-section alabaster"><!--main-section alabaster-start-->
+    <section class="main-section section-even"><!--main-section alabaster-start-->
         {% include 'home/parts/featured.html' %}
     </section><!--main-section alabaster-end-->
 
 
-    <section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+    <section class="main-section section-odd paddind" id="Portfolio"><!--main-section-start-->
        {% include 'home/parts/portfolio.html' %}
     </section><!--main-section-end-->
 {#    <section class="main-section client-part" id="client"><!--main-section client-part-start-->#}
@@ -52,20 +52,12 @@
 {#            </ul>#}
 {#        </div>#}
 {#    </div><!--c-logo-part-end-->#}
-    <section class="main-section team" id="team"><!--main-section team-start-->
+    <section class="main-section section-even team" id="team"><!--main-section team-start-->
         {% include 'home/parts/team.html' %}
     </section><!--main-section team-end-->
 
-
-    <section class="business-talking"><!--business-talking-start-->
-        <div class="container">
-            <h2>Let’s Talk Business.</h2>
-        </div>
-    </section><!--business-talking-end-->
-    <div class="container">
-        <section class="main-section contact" id="contact">
-          {% include 'home/parts/contactus.html' %}
-        </section>
-    </div>
+    <section class="main-section contact section-odd" id="contact">
+      {% include 'home/parts/contactus.html' %}
+    </section>
     {% include 'home/parts/footer.html' %}
 {% endblock %}
