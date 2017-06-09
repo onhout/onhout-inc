@@ -48,22 +48,22 @@ gulp.task('webpack', function () {
 //         .pipe(gulp.dest('/static/'))
 // });
 
-// var config = {
-//     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-//     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-// };
-//
-// gulp.task("upload", function() {
-//     gulp.src("./static/**")
-//         .pipe(gs3(config)({
-//             Bucket: 'minalanguage', //  Required
-//             ACL:    'public-read-write'       //  Needs to be user-defined
-//         }, {
-//             // S3 Constructor Options, ie:
-//             maxRetries: 5
-//         }))
-//     ;
-// });
+var config = {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+};
+
+gulp.task("upload", function() {
+    gulp.src("./static/**")
+        .pipe(gs3(config)({
+            Bucket: 'minalanguage', //  Required
+            ACL:    'public-read-write'       //  Needs to be user-defined
+        }, {
+            // S3 Constructor Options, ie:
+            maxRetries: 5
+        }))
+    ;
+});
 
 gulp.task('watch', function () {
     gulp.watch(['./src/**'], ['clean-dist', 'webpack']);

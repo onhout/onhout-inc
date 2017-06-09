@@ -10,6 +10,8 @@ module.exports = {
         main: ['main/js/main', 'main/less/main.less'],
         vendor: [
             'jquery',
+            'jquery-ui-dist/jquery-ui',
+            'jquery-validation',
             'onhout_globals/index.js',
             'onhout_globals/index.less',
             'bootstrap',
