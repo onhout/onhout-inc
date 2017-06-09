@@ -1,75 +1,40 @@
 $(function () {
+    $('.contactForm').validate();
+    // $('.res-nav_click').click(function () {
+    //     $('.main-nav').slideToggle();
+    //     return false
+    //
+    // });
+    //
+    // $('.main-nav li a, .servicelink').bind('click', function (event) {
+    //     var $anchor = $(this);
+    //
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top - 102
+    //     }, 1500, 'easeInOutExpo');
+    //     /*
+    //      if you don't want to use the easing effects:
+    //      $('html, body').stop().animate({
+    //      scrollTop: $($anchor.attr('href')).offset().top
+    //      }, 1000);
+    //      */
+    //     if ($(window).width() < 768) {
+    //         $('.main-nav').hide();
+    //     }
+    //     event.preventDefault();
+    // });
 
-    $('#test').scrollToFixed();
-    $('.res-nav_click').click(function () {
-        $('.main-nav').slideToggle();
-        return false
-
-    });
-
-    var wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset: 100
-        }
-    );
-    wow.init();
-
-    $('.main-nav li a, .servicelink').bind('click', function (event) {
+    // Add smooth scrolling to all links in navbar
+    $(".navbar a:not(a.link), .servicelink, .Learn-More").on('click', function (event) {
         var $anchor = $(this);
-
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 102
-        }, 1500, 'easeInOutExpo');
-        /*
-         if you don't want to use the easing effects:
-         $('html, body').stop().animate({
-         scrollTop: $($anchor.attr('href')).offset().top
-         }, 1000);
-         */
-        if ($(window).width() < 768) {
-            $('.main-nav').hide();
-        }
         event.preventDefault();
-    });
-
-    var $container = $('.portfolioContainer'),
-        $body = $('body'),
-        colW = 375,
-        columns = null;
-
-
-    $container.isotope({
-        // disable window resizing
-        resizable: true,
-        masonry: {
-            columnWidth: colW
+        var hash = this.hash;
+        if (hash && window.location.pathname == '/') {
+            $('html, body').animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+        } else {
+            window.location.href = '/' + this.hash;
         }
     });
-
-    $(window).smartresize(function () {
-        // check if columns has changed
-        var currentColumns = Math.floor(( $body.width() - 30 ) / colW);
-        if (currentColumns !== columns) {
-            // set new column count
-            columns = currentColumns;
-            // apply width to container manually, then trigger relayout
-            $container.width(columns * colW)
-                .isotope('reLayout');
-        }
-
-    }).smartresize(); // trigger resize to set container width
-    $('.portfolioFilter a').click(function () {
-        $('.portfolioFilter .current').removeClass('current');
-        $(this).addClass('current');
-
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-
-            filter: selector,
-        });
-        return false;
-    });
-
-
 });
