@@ -56,7 +56,7 @@ var config = {
 gulp.task("upload", function() {
     gulp.src("./static/**")
         .pipe(gs3(config)({
-            Bucket: 'minalanguage', //  Required
+            Bucket: 'onhout', //  Required
             ACL:    'public-read-write'       //  Needs to be user-defined
         }, {
             // S3 Constructor Options, ie:
