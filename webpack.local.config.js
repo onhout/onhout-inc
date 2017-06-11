@@ -35,23 +35,24 @@ module.exports = {
             moment: 'moment',
         }),
         new ExtractTextPlugin('[name]-[hash].css'),
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].js'}),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor-[hash].js', Infinity),
     ],
+
+    devtool: 'cheap-module-source-map',
 
     module: {
         loaders: [
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}, // to transform JSX into JS
-            {
-                test: /\.less$/,
-                loaders: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader!less-loader"})
-            }, //to transform less into CSS
+            {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")}, //to transform less into CSS
             {test: /\.(jpe|jpg|png|woff|woff2|eot|ttf|gif|svg)(\?.*$|$)/, loader: 'url-loader?limit=100000'},//changed the regex because of an issue of loading less-loader for font-awesome.
-            {test: /\.css$/, loaders: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},
+            {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
         ],
     },
 
     resolve: {
-        modules: ['node_modules', 'src'],
-        extensions: ['.js', '.jsx']
+        modulesDirectories: ['node_modules', 'static/components'],
+        root: path.resolve('./src'),
+        extensions: ['', '.js', '.jsx']
     },
 };

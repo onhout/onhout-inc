@@ -21,28 +21,24 @@ module.exports = {
 
     output: {
         path: path.resolve('./onhout/static/dist/'),
-        publicPath: '/static/dist/',
+        publicPath: 'https://s3-us-west-1.amazonaws.com/onhout/dist/',
         chunkFilename: '[id]-[hash].chunk.js',
         filename: "[name]-[hash].js",
     },
 
-    plugins: [
+     plugins: [
         // new webpack.optimize.UglifyJsPlugin(),
         new BundleTracker({filename: './webpack-stats.json'}),
         new webpack.ProvidePlugin({
             $: 'jquery',             // bootstrap 3.x requires
             jQuery: 'jquery',        // bootstrap 3.x requires
-            moment: 'moment',
+            moment: 'moment'
         }),
         new ExtractTextPlugin('[name]-[hash].css'),
         new webpack.DefinePlugin({
             'process.env': {
-                'NODE_ENV': JSON.stringify('production')
+                NODE_ENV: JSON.stringify('production')
             }
-        }),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false
         }),
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,
@@ -55,23 +51,22 @@ module.exports = {
             },
             comments: false
         }),
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].js'}),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor-[hash].js', Infinity),
     ],
 
     module: {
         loaders: [
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}, // to transform JSX into JS
-            {
-                test: /\.less$/,
-                loaders: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader!less-loader"})
-            }, //to transform less into CSS
+            {test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")}, //to transform less into CSS
             {test: /\.(jpe|jpg|png|woff|woff2|eot|ttf|gif|svg)(\?.*$|$)/, loader: 'url-loader?limit=100000'},//changed the regex because of an issue of loading less-loader for font-awesome.
-            {test: /\.css$/, loaders: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},
+            {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
         ],
     },
 
     resolve: {
-        modules: ['node_modules', 'src'],
-        extensions: ['.js', '.jsx']
+        modulesDirectories: ['node_modules', 'static/components'],
+        root: path.resolve('./src'),
+        extensions: ['', '.js', '.jsx']
     },
 };
