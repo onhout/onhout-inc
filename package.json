@@ -30,6 +30,7 @@
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.26.1",
     "del": "^2.2.2",
+    "eb-fix-npm": "^1.2.5",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "gulp": "^3.9.1",
