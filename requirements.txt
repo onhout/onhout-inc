@@ -1,5 +1,6 @@
 ansicolors==1.0.2
 beautifulsoup4==4.6.0
+boto==2.47.0
 certifi==2017.4.17
 chardet==3.0.3
 configparser==3.5.0
@@ -7,6 +8,7 @@ Django==1.11.2
 django-decouple==2.1
 django-gulp==2.5.1
 django-modelcluster==3.1
+django-ses==0.8.2
 django-storages==1.5.2
 django-taggit==0.22.1
 django-treebeard==4.1.1

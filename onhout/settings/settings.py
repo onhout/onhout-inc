@@ -21,14 +21,12 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'qqrcvy-ly4k&$2fnu@@qo_ppsj%n1f98u3br+oh3&0^&yrle%4'
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Application definition
 
 INSTALLED_APPS = [
@@ -139,8 +137,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_SES_REGION_NAME = 'us-west-2'
+AWS_SES_REGION_ENDPOINT = 'email.us-west-2.amazonaws.com'
 
 AWS_QUERYSTRING_AUTH = False
 if 'AWS_ACCESS_KEY_ID' in os.environ:

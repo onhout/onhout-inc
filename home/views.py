@@ -11,15 +11,14 @@ def send_message(request):
         "secret": "6LdNvyQUAAAAABfFwGtPN65NreuFln8NtiTxpl9Q"
     })
     if request.method == "POST" and request.POST.get('email') and r.json()['success'] is True:
-        print('good')
-        # person = request.POST.get('person')
-        # email = request.POST.get('email')
-        # subject = request.POST.get('subject')
-        # message = "(%s:%s) sent you the following message: \"%s\"" % (person, email, request.POST.get('message'))
-        # send_mail(
-        #     subject,
-        #     message,
-        #     'admin@minajeong.com',
-        #     ['zxoct11@gmail.com'],
-        #     fail_silently=False, )
+        person = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = "(%s:%s) sent you the following message: \"%s\"" % (person, email, request.POST.get('message'))
+        send_mail(
+            subject,
+            message,
+            'noreply@onhout.com',
+            ['onhout@gmail.com'],
+            fail_silently=False, )
     return redirect('/')
