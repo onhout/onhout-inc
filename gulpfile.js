@@ -54,7 +54,7 @@ var config = {
 };
 
 gulp.task("upload", function() {
-    gulp.src("./static/**")
+    gulp.src("./onhout/static/**")
         .pipe(gs3(config)({
             Bucket: 'onhout', //  Required
             ACL:    'public-read-write'       //  Needs to be user-defined
