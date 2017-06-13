@@ -6,20 +6,20 @@
 
 {% block content %}
     <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="meta">{{ page.date }}</p>
-
-        <div class="intro">{{ page.intro }}</div>
-
-        {{ page.body|richtext }}
+        <h1 class="text-center">{{ page.title }}</h1>
+        <p><a href="{{ page.get_parent.url }}">Return to blog list</a></p>
+        <p class="meta text-muted"><em>{{ page.date }}</em></p>
 
         {% for item in page.gallery_images.all %}
-            <div style="float: left; margin: 10px">
+            <div class="text-center" style="margin: 10px;">
                 {% image item.image fill-320x240 %}
                 <p>{{ item.caption }}</p>
             </div>
         {% endfor %}
+        <h3 class="intro text-center">{{ page.intro }}</h3>
 
-        <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
+        {{ page.body|richtext }}
+
+
     </div>
 {% endblock %}
