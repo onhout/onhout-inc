@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 from __future__ import absolute_import, unicode_literals
-from decouple import config
+
 import os
+
+from decouple import config
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -21,7 +23,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -172,7 +174,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-if DEBUG:
+if DEBUG is True:
     STATIC_URL = '/static/'
 else:
     STATIC_URL = 'http://onhout.s3.amazonaws.com/'
