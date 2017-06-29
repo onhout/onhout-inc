@@ -17,9 +17,13 @@ class AdsIndexPage(Page):
 # Create your models here.
 class Ads(Page):
     date = models.DateField("Post date")
+    background_color = models.CharField(max_length=10, null=True, blank=True)
+    button_text = models.CharField(max_length=120, null=True, blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
+        FieldPanel('background_color'),
+        FieldPanel('button_text'),
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
@@ -29,9 +33,9 @@ class AdsImage(Orderable):
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
-    caption = models.CharField(blank=True, max_length=250)
+    aff_link = models.CharField(blank=True, max_length=250)
 
     panels = [
         ImageChooserPanel('image'),
-        FieldPanel('caption'),
+        FieldPanel('aff_link'),
     ]
