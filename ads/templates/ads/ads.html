@@ -31,12 +31,12 @@
     <body style="background-color: {{ page.background_color }}">
     {% for item in page.gallery_images.all %}
         <div style="width: 100%; height: auto; text-align: center">
-            <a href="http://{{ item.aff_link }}" onclick="return popitup(this)">
+            <a href="{{ item.aff_link }}" onclick="return popitup(this)">
                 {% image item.image original %}
             </a>
         </div>
         <div style="text-align: center; margin-top: 5px">
-            <a href="http://{{ item.aff_link }}" onclick="return popitup(this)"
+            <a href="{{ item.aff_link }}" onclick="return popitup(this)"
                style="background-color: {{ page.background_color }};
                        border:1px solid white;
                        color:white;
