@@ -152,7 +152,7 @@ if 'AWS_ACCESS_KEY_ID' in os.environ:
 else:
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-MEDIA_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = 'http://%s.s3.amazonaws.com/uploads/' % AWS_STORAGE_BUCKET_NAME
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 AWS_S3_OBJECT_PARAMETERS = {
@@ -173,10 +173,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-if DEBUG is True:
-    STATIC_URL = '/static/'
-else:
-    STATIC_URL = 'http://onhout.s3.amazonaws.com/'
+STATIC_URL = 'http://onhout.s3.amazonaws.com/'
 
 
 WEBPACK_LOADER = {
