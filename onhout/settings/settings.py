@@ -32,7 +32,6 @@ SECRET_KEY = 'qqrcvy-ly4k&$2fnu@@qo_ppsj%n1f98u3br+oh3&0^&yrle%4'
 # Application definition
 
 INSTALLED_APPS = [
-    'django_gulp',
     'webpack_loader',
     'home',
     'ads',
