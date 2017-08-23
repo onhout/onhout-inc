@@ -172,7 +172,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_URL = 'http://onhout.s3.amazonaws.com/'
+if DEBUG == True:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = 'http://onhout.s3.amazonaws.com/'
 
 
 WEBPACK_LOADER = {

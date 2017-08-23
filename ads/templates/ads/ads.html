@@ -23,6 +23,11 @@
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script>
         function popitup(link) {
             var w = window.open(link.href,
@@ -33,24 +38,19 @@
     </script>
     <body style="background-color: {{ page.background_color }}">
     {% for item in page.gallery_images.all %}
-        <div style="width: 100%; height: auto; text-align: center">
-            <a href="{{ item.aff_link }}" onclick="return popitup(this)">
-                {% image item.image original %}
-            </a>
-        </div>
-        <div style="text-align: center; margin-top: 5px">
-            <a href="{{ item.aff_link }}" onclick="return popitup(this)"
-               style="background-color: {{ page.background_color }};
-                       border:1px solid white;
-                       color:white;
-                       padding: 15px 32px;
-                       display:inline-block;
-                       text-decoration: none;
-                       font-size: 32px;
-                       text-align: center">{{ page.button_text }}</a>
-        </div>
-
+        <a href="{{ item.aff_link }}" onclick="return popitup(this)">
+            {% image item.image original class="img-responsive center-block" %}
+        </a>
     {% endfor %}
+    <div style="text-align: center; margin-top: 5px">
+        <a href="{{ item.aff_link }}" onclick="return popitup(this)" class="btn btn-default"
+           style="background-color: {{ page.background_color }};
+                   padding: 15px 32px;
+                   font-size: 32px;
+                   text-align: center">
+            <span style="color:{{ page.background_color }};filter:invert(100%);">{{ page.button_text }}</span>
+        </a>
+    </div>
     </body>
 
 {% endblock %}
