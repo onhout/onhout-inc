@@ -4,7 +4,7 @@ node_modules/
 .idea/
 db.sqlite3
 .DS_Store
-webpack-stats.json
+/webpack-stats.json
 # Elastic Beanstalk Files
 
 onhout/static/
