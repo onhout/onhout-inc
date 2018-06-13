@@ -52,7 +52,8 @@ module.exports = {
             },
             s3UploadOptions: {
                 Bucket: 'onhout'
-            }
+            },
+            basePath: 'dist'
         })
     ],
     optimization: {
