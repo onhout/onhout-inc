@@ -175,7 +175,7 @@ else:
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'http://192.168.0.16:3000/dist/',
+        'BUNDLE_DIR_NAME': '/static/',
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
