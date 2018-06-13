@@ -10,7 +10,7 @@ $(function () {
         if (hash && window.location.pathname == '/') {
             $('html, body').animate({
                 scrollTop: $($anchor.attr('href')).offset().top
-            }, 1500, 'easeInOutExpo');
+            }, 1500, 'easeIn');
         } else {
             window.location.href = '/' + this.hash;
         }

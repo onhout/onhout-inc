@@ -1,49 +1,24 @@
 {
   "status": "done",
-  "publicPath": "/static/dist/",
+  "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/",
   "chunks": {
-    "main": [
-      {
-        "name": "main-767296a1faf41a639693.js",
-        "publicPath": "/static/dist/main-767296a1faf41a639693.js",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/main-767296a1faf41a639693.js"
-      },
-      {
-        "name": "main-767296a1faf41a639693.css",
-        "publicPath": "/static/dist/main-767296a1faf41a639693.css",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/main-767296a1faf41a639693.css"
-      },
-      {
-        "name": "main-767296a1faf41a639693.js.map",
-        "publicPath": "/static/dist/main-767296a1faf41a639693.js.map",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/main-767296a1faf41a639693.js.map"
-      },
-      {
-        "name": "main-767296a1faf41a639693.css.map",
-        "publicPath": "/static/dist/main-767296a1faf41a639693.css.map",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/main-767296a1faf41a639693.css.map"
-      }
-    ],
     "vendor": [
       {
-        "name": "vendor-767296a1faf41a639693.js",
-        "publicPath": "/static/dist/vendor-767296a1faf41a639693.js",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/vendor-767296a1faf41a639693.js"
+        "name": "vendor-3c8bac441923bdea0df9.js",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-3c8bac441923bdea0df9.js",
+        "path": "/home/onhout/onhout-inc/onhout/static/vendor-3c8bac441923bdea0df9.js"
       },
       {
-        "name": "vendor-767296a1faf41a639693.css",
-        "publicPath": "/static/dist/vendor-767296a1faf41a639693.css",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/vendor-767296a1faf41a639693.css"
-      },
+        "name": "vendor-3c8bac441923bdea0df9.css",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-3c8bac441923bdea0df9.css",
+        "path": "/home/onhout/onhout-inc/onhout/static/vendor-3c8bac441923bdea0df9.css"
+      }
+    ],
+    "main": [
       {
-        "name": "vendor-767296a1faf41a639693.js.map",
-        "publicPath": "/static/dist/vendor-767296a1faf41a639693.js.map",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/vendor-767296a1faf41a639693.js.map"
-      },
-      {
-        "name": "vendor-767296a1faf41a639693.css.map",
-        "publicPath": "/static/dist/vendor-767296a1faf41a639693.css.map",
-        "path": "/home/onhout/Documents/onhout-inc/onhout/static/dist/vendor-767296a1faf41a639693.css.map"
+        "name": "main-3c8bac441923bdea0df9.js",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/main-3c8bac441923bdea0df9.js",
+        "path": "/home/onhout/onhout-inc/onhout/static/main-3c8bac441923bdea0df9.js"
       }
     ]
   }
