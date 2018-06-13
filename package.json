@@ -5,8 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "build": "webpack --config webpack.production.config.js --progress --colors",
-    "postbuild": "gulp upload"
+    "build": "webpack --config webpack.production.config.js --progress --colors"
   },
   "author": "Peter Liu",
   "license": "MIT",
