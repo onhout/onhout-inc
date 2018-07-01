@@ -9,9 +9,9 @@ new WebpackDevServer(webpack(config), {
     inline: true,
     historyApiFallback: true,
     headers: {"Access-Control-Allow-Origin": "*"}
-}).listen(3000, '192.168.0.16', function (err, result) {
+}).listen(3000, 'localhost', function (err, result) {
     if (err) {
         console.log(err)
     }
-    console.log('Listening at 192.168.0.16:3000')
+    console.log('Listening at localhost:3000')
 });

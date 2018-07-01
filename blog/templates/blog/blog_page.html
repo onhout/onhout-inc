@@ -5,7 +5,7 @@
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container" style="padding: 50px 0;">
         <h1 class="text-center">{{ page.title }}</h1>
         <p><a href="{{ page.get_parent.url }}">Return to blog list</a></p>
         <p class="meta text-muted"><em>{{ page.date }}</em></p>
@@ -19,7 +19,6 @@
         <h3 class="intro text-center">{{ page.intro }}</h3>
 
         {{ page.body|richtext }}
-
 
     </div>
 {% endblock %}

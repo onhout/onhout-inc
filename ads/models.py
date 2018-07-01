@@ -1,8 +1,8 @@
 from django.db import models
 from modelcluster.fields import ParentalKey
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
-from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.core.models import Page, Orderable
+from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class AdsIndexPage(Page):

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 import django.db.models.deletion
 import modelcluster.fields
-import wagtail.wagtailcore.fields
+import wagtail.core.fields
 from django.db import migrations, models
 
 
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             name='BlogIndexPage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('intro', wagtail.wagtailcore.fields.RichTextField(blank=True)),
+                ('intro', wagtail.core.fields.RichTextField(blank=True)),
             ],
             options={
                 'abstract': False,
@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
                 ('date', models.DateField(verbose_name='Post date')),
                 ('intro', models.CharField(max_length=250)),
-                ('body', wagtail.wagtailcore.fields.RichTextField(blank=True)),
+                ('body', wagtail.core.fields.RichTextField(blank=True)),
             ],
             options={
                 'abstract': False,

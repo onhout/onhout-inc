@@ -9,7 +9,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: [
-            'webpack-dev-server/client?http://192.168.0.16:3000',
+            'webpack-dev-server/client?http://localhost:3000',
             'webpack/hot/only-dev-server',
             './src/index'
         ],
@@ -26,7 +26,7 @@ module.exports = {
 
     output: {
         path: path.resolve('./onhout/static/'),
-        publicPath: 'http://192.168.0.16:3000/static/',
+        publicPath: 'http://localhost:3000/static/',
         chunkFilename: '[id]-[hash].chunk.js',
         filename: "[name]-[hash].js",
     },
