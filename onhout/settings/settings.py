@@ -23,11 +23,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if config['DEV_ENV']:
-    DEBUG = True
-else:
-    DEBUG = False
 
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: keep the secret key used in production secret!
