@@ -8,26 +8,26 @@ module.exports = {
     context: __dirname,
     mode: 'development',
     entry: {
-        main: [
+        vendor: [
             'webpack-dev-server/client?http://localhost:3000',
             'webpack/hot/only-dev-server',
-            './src/index'
-        ],
-        vendor: [
             'jquery',
             'jquery-ui-dist/jquery-ui',
             'jquery-validation',
-            './src/onhout_globals/index.js',
-            './src/onhout_globals/index.less',
             'bootstrap',
-            'moment'
+            'popper.js',
+            'moment',
+            './src/onhout_globals/global.js',
+            './src/onhout_globals/global.less'
+        ],
+        main: [
+            './src/index'
         ]
-    }, // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
+    },
 
     output: {
         path: path.resolve('./onhout/static/'),
         publicPath: 'http://localhost:3000/static/',
-        chunkFilename: '[id]-[hash].chunk.js',
         filename: "[name]-[hash].js",
     },
 
@@ -35,9 +35,10 @@ module.exports = {
         // new webpack.optimize.UglifyJsPlugin(),
         new BundleTracker({filename: './webpack-stats.json'}),
         new webpack.ProvidePlugin({
-            $: 'jquery',             // bootstrap 3.x requires
-            jQuery: 'jquery',        // bootstrap 3.x requires
+            $: 'jquery',
+            jQuery: 'jquery',
             moment: 'moment',
+            Popper: ['popper.js', 'default']
         }),
         new ExtractTextPlugin('[name]-[hash].css'),
         new webpack.NamedModulesPlugin(),

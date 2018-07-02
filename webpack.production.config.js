@@ -9,22 +9,22 @@ module.exports = {
     context: __dirname,
     mode: 'production',
     entry: {
-        main: './src/index',
         vendor: [
             'jquery',
             'jquery-ui-dist/jquery-ui',
             'jquery-validation',
-            'onhout_globals/index.js',
-            'onhout_globals/index.less',
             'bootstrap',
-            'moment'
-        ]
+            'popper.js',
+            'moment',
+            'onhout_globals/index.js',
+            'onhout_globals/index.less'
+        ],
+        main: './src/index'
     }, // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
 
     output: {
         path: path.resolve('./onhout/static/'),
         publicPath: 'https://s3-us-west-1.amazonaws.com/onhout/dist/',
-        chunkFilename: '[id]-[hash].chunk.js',
         filename: "[name]-[hash].js",
     },
 
