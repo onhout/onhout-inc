@@ -6,9 +6,9 @@ $(function () {
     $(".navbar a:not(a.link), .servicelink, .Learn-More").on('click', function (event) {
 
         const target = $(this.hash);
+        const self = $(this);
         event.preventDefault();
-        const hash = this.hash;
-        if (hash && window.location.pathname == '/') {
+        if (self[0].hash && window.location.pathname == '/') {
             $('html, body').animate({
                 scrollTop: target.offset().top
             }, 1500, 'easeInOutExpo', function () {
@@ -24,7 +24,7 @@ $(function () {
                 }
             });
         } else {
-            window.location.href = '/' + this.hash;
+            window.location.href = self.attr('href');
         }
     });
 });

@@ -6,29 +6,17 @@
 
 {% block content %}
     <div class="container" style="padding: 50px 0;">
-
-        <div class="intro">{{ page.intro|richtext }}</div>
-
         {% for post in blogpages %}
 
-{#            <div class="page-header">#}
-{#                <h3><a href="{% pageurl post %}">{{ post.title }}</a>#}
-{#                    <small><em> - {{ post.specific.intro }}</em></small>#}
-{#                </h3>#}
-{#                <p>{{ post.specific.body|truncatechars:300|richtext }}</p>#}
-{#                <p><strong><em>Posted: {{ post.specific.date }}</em></strong></p>#}
-{#            </div>#}
-
             <div class="media">
-{#                <img class="mr-3" src="{{ post.specific.feed_image }}" alt="Generic placeholder image">#}
-                {% image post.specific.feed_image fill-64x64 class="mr-3" %}
+                {% image post.specific.feed_image fill-128x128 class="mr-3" %}
                 <div class="media-body">
-                    <h5 class="mt-0"><a href="{% pageurl post %}">{{ post.title }}</a></h5>
+                    <h5 class="mt-0 page-title"><a href="{% pageurl post %}">{{ post.title|upper }}</a></h5>
                     {{ post.specific.body|truncatechars:300|richtext }}
                     <p><strong><em>Posted: {{ post.specific.date }}</em></strong></p>
                 </div>
             </div>
-
+            <hr/>
         {% endfor %}
     </div>
 {% endblock %}

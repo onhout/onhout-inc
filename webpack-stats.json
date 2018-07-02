@@ -4,56 +4,36 @@
   "chunks": {
     "main": [
       {
-        "name": "main-3c144931840841784e03.js",
-        "publicPath": "http://localhost:3000/static/main-3c144931840841784e03.js",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/main-3c144931840841784e03.js"
+        "name": "main-ee3a819d3f70fd925c1a.js",
+        "publicPath": "http://localhost:3000/static/main-ee3a819d3f70fd925c1a.js",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/main-ee3a819d3f70fd925c1a.js"
       },
       {
-        "name": "main-3c144931840841784e03.js.map",
-        "publicPath": "http://localhost:3000/static/main-3c144931840841784e03.js.map",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/main-3c144931840841784e03.js.map"
+        "name": "main-ee3a819d3f70fd925c1a.js.map",
+        "publicPath": "http://localhost:3000/static/main-ee3a819d3f70fd925c1a.js.map",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/main-ee3a819d3f70fd925c1a.js.map"
       }
     ],
     "vendor": [
       {
-        "name": "vendor-3c144931840841784e03.js",
-        "publicPath": "http://localhost:3000/static/vendor-3c144931840841784e03.js",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-3c144931840841784e03.js"
+        "name": "vendor-ee3a819d3f70fd925c1a.js",
+        "publicPath": "http://localhost:3000/static/vendor-ee3a819d3f70fd925c1a.js",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-ee3a819d3f70fd925c1a.js"
       },
       {
-        "name": "vendor.53f68fecf4318a0bab3c.hot-update.js",
-        "publicPath": "http://localhost:3000/static/vendor.53f68fecf4318a0bab3c.hot-update.js",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor.53f68fecf4318a0bab3c.hot-update.js"
+        "name": "vendor-ee3a819d3f70fd925c1a.css",
+        "publicPath": "http://localhost:3000/static/vendor-ee3a819d3f70fd925c1a.css",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-ee3a819d3f70fd925c1a.css"
       },
       {
-        "name": "vendor.53f68fecf4318a0bab3c.hot-update.js",
-        "publicPath": "http://localhost:3000/static/vendor.53f68fecf4318a0bab3c.hot-update.js",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor.53f68fecf4318a0bab3c.hot-update.js"
+        "name": "vendor-ee3a819d3f70fd925c1a.js.map",
+        "publicPath": "http://localhost:3000/static/vendor-ee3a819d3f70fd925c1a.js.map",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-ee3a819d3f70fd925c1a.js.map"
       },
       {
-        "name": "vendor-3c144931840841784e03.css",
-        "publicPath": "http://localhost:3000/static/vendor-3c144931840841784e03.css",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-3c144931840841784e03.css"
-      },
-      {
-        "name": "vendor-3c144931840841784e03.js.map",
-        "publicPath": "http://localhost:3000/static/vendor-3c144931840841784e03.js.map",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-3c144931840841784e03.js.map"
-      },
-      {
-        "name": "vendor.53f68fecf4318a0bab3c.hot-update.js.map",
-        "publicPath": "http://localhost:3000/static/vendor.53f68fecf4318a0bab3c.hot-update.js.map",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor.53f68fecf4318a0bab3c.hot-update.js.map"
-      },
-      {
-        "name": "vendor.53f68fecf4318a0bab3c.hot-update.js.map",
-        "publicPath": "http://localhost:3000/static/vendor.53f68fecf4318a0bab3c.hot-update.js.map",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor.53f68fecf4318a0bab3c.hot-update.js.map"
-      },
-      {
-        "name": "vendor-3c144931840841784e03.css.map",
-        "publicPath": "http://localhost:3000/static/vendor-3c144931840841784e03.css.map",
-        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-3c144931840841784e03.css.map"
+        "name": "vendor-ee3a819d3f70fd925c1a.css.map",
+        "publicPath": "http://localhost:3000/static/vendor-ee3a819d3f70fd925c1a.css.map",
+        "path": "/Users/pl/Documents/onhout-inc/onhout/static/vendor-ee3a819d3f70fd925c1a.css.map"
       }
     ]
   }
