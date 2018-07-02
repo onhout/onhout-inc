@@ -16,8 +16,8 @@ module.exports = {
             'bootstrap',
             'popper.js',
             'moment',
-            'onhout_globals/index.js',
-            'onhout_globals/index.less'
+            './src/onhout_globals/global.js',
+            './src/onhout_globals/global.less'
         ],
         main: './src/index'
     }, // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
