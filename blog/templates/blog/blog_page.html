@@ -15,7 +15,7 @@
             <div class="carousel-inner">
                 {% for item in page.gallery_images.all %}
                     <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                        {% image item.image fill-640x240-c50 class="d-block w-100" %}
+                        {% image item.image fill-1080x320-c100 class="d-block w-100" %}
                         <div class="carousel-caption d-none d-md-block">
                             <p>{{ item.caption }}</p>
                         </div>
