@@ -1,1 +1,1 @@
-web: gunicorn onhout.wsgi
+web: waitress-serve --port=$PORT onhout.wsgi:application

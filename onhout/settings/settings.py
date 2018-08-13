@@ -15,6 +15,7 @@ from __future__ import absolute_import, unicode_literals
 import os
 
 from decouple import config
+import dj_database_url
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -104,14 +105,7 @@ WSGI_APPLICATION = 'onhout.wsgi.application'
 
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT'],
-        }
+        'default':  dj_database_url.config(default='postgres://localhost')
     }
 else:
     DATABASES = {
