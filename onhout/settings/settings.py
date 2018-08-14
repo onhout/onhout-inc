@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'onhout.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 
-if 'RDS_DB_NAME' in os.environ:
+if not DEBUG:
     DATABASES = {
         'default':  dj_database_url.config(default='postgres://localhost')
     }
