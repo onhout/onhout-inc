@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const S3Plugin = require('webpack-s3-plugin');
+require('dotenv').config();
 module.exports = {
     context: __dirname,
     mode: 'production',
