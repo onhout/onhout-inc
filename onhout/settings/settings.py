@@ -163,7 +163,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-if DEBUG == True:
+if DEBUG == True: 
     STATIC_URL = '/static/'
 else:
     STATIC_URL = 'https://onhout.s3.amazonaws.com/'
