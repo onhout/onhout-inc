@@ -14,8 +14,8 @@ from __future__ import absolute_import, unicode_literals
 
 import os
 
-from decouple import config
 import dj_database_url
+from decouple import config
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -166,7 +166,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 if DEBUG == True:
     STATIC_URL = '/static/'
 else:
-    STATIC_URL = 'http://onhout.s3.amazonaws.com/'
+    STATIC_URL = 'https://onhout.s3.amazonaws.com/'
 
 WEBPACK_LOADER = {
     'DEFAULT': {
