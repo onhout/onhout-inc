@@ -1,1 +1,25 @@
-{"status":"done","publicPath":"https://s3-us-west-1.amazonaws.com/onhout/dist/","chunks":{"vendor":[{"name":"vendor-76bf84cb865214916553.js","publicPath":"https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-76bf84cb865214916553.js","path":"/mnt/c/Users/peterliu.ASCOFFICE/PycharmProjects/onhout-inc/onhout/static/vendor-76bf84cb865214916553.js"},{"name":"vendor-76bf84cb865214916553.css","publicPath":"https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-76bf84cb865214916553.css","path":"/mnt/c/Users/peterliu.ASCOFFICE/PycharmProjects/onhout-inc/onhout/static/vendor-76bf84cb865214916553.css"}],"main":[{"name":"main-76bf84cb865214916553.js","publicPath":"https://s3-us-west-1.amazonaws.com/onhout/dist/main-76bf84cb865214916553.js","path":"/mnt/c/Users/peterliu.ASCOFFICE/PycharmProjects/onhout-inc/onhout/static/main-76bf84cb865214916553.js"}]}}
+{
+  "status": "done",
+  "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/",
+  "chunks": {
+    "vendor": [
+      {
+        "name": "vendor-49c35a2ad948e7d2928c.js",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-49c35a2ad948e7d2928c.js",
+        "path": "/Users/onhout/Documents/PycharmProjects/onhout-inc/onhout/static/vendor-49c35a2ad948e7d2928c.js"
+      },
+      {
+        "name": "vendor-49c35a2ad948e7d2928c.css",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/vendor-49c35a2ad948e7d2928c.css",
+        "path": "/Users/onhout/Documents/PycharmProjects/onhout-inc/onhout/static/vendor-49c35a2ad948e7d2928c.css"
+      }
+    ],
+    "main": [
+      {
+        "name": "main-49c35a2ad948e7d2928c.js",
+        "publicPath": "https://s3-us-west-1.amazonaws.com/onhout/dist/main-49c35a2ad948e7d2928c.js",
+        "path": "/Users/onhout/Documents/PycharmProjects/onhout-inc/onhout/static/main-49c35a2ad948e7d2928c.js"
+      }
+    ]
+  }
+}
