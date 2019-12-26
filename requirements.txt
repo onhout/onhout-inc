@@ -1,13 +1,13 @@
+-i https://pypi.org/simple/
 ansicolors==1.1.8
 beautifulsoup4==4.6.0
-boto==2.49.0
 boto3==1.9.96
+boto==2.49.0
 botocore==1.12.96
 certifi==2018.11.29
 chardet==3.0.4
 configparser==3.7.1
 dj-database-url==0.5.0
-Django==2.1.7
 django-decouple==2.1
 django-modelcluster==4.3
 django-ses==0.8.9
@@ -15,6 +15,7 @@ django-storages==1.7.1
 django-taggit==0.23.0
 django-treebeard==4.3
 django-webpack-loader==0.6.0
+django==2.1.7
 djangorestframework==3.9.1
 docutils==0.14
 draftjs-exporter==2.1.5
@@ -26,10 +27,10 @@ jmespath==0.9.3
 l18n==2018.5
 olefile==0.46
 optional-django==0.3.0
-Pillow==5.4.1
+pillow==5.4.1
 psutil==5.5.1
-psycopg2==2.7.7
 psycopg2-binary==2.7.7
+psycopg2==2.7.7
 python-dateutil==2.8.0
 pytz==2018.9
 requests==2.21.0
@@ -37,9 +38,9 @@ s3transfer==0.2.0
 six==1.12.0
 soupsieve==1.8
 tini==3.0.1
-Unidecode==1.0.23
+unidecode==1.0.23
 urllib3==1.24.1
 wagtail==2.4
-waitress==1.2.1
+waitress==1.4.1
 webencodings==0.5.1
-Willow==1.1
+willow==1.1
